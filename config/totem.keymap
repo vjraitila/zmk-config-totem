@@ -158,19 +158,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)      &kp LS(N6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
-       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)    &kp RBKT    &kp NUHS       &kp RA(N7)  &kp RA(N0)  &kp MINUS
-&none  &kp RA(NUBS)   &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp GRAVE       &kp EQUAL   &kp RA(MINUS)  &kp RA(N8)  &kp RA(N9)  &kp LS(FSLH)  &none
-                                  &none         &none         &none           &none       &trans         &none
+       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)      &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)    &kp RBKT    &kp NUHS        &kp LS(LA(N8))  &kp LS(LA(N9))  &kp MINUS
+&none  &kp RA(N7)     &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp GRAVE       &kp EQUAL   &kp LS(LA(N7))  &kp RA(N8)      &kp RA(N9)      &kp LS(FSLH)  &none
+                                  &none         &none         &none           &none       &trans          &none
             >;
         };
 
         sym_win {
             bindings = <
-        &trans      &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans
-        &trans      &trans  &trans  &trans  &trans    &trans  &trans          &kp LS(LA(N8))  &kp LS(LA(N9))  &trans
-&trans  &kp RA(N7)  &trans  &trans  &trans  &trans    &trans  &kp LS(LA(N7))  &trans          &trans          &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans          &trans
+        &trans        &trans  &trans  &trans  &trans    &trans  &trans         &trans      &trans      &trans
+        &trans        &trans  &trans  &trans  &trans    &trans  &trans         &kp RA(N7)  &kp RA(N0)  &trans
+&trans  &kp RA(NUBS)  &trans  &trans  &trans  &trans    &trans  &kp RA(MINUS)  &trans      &trans      &trans  &trans
+                              &trans  &trans  &trans    &trans  &trans         &trans
             >;
 
             label = "SYW";
