@@ -167,10 +167,10 @@
 
         sym_win {
             bindings = <
-        &trans        &trans  &trans  &trans  &trans    &trans  &trans         &trans      &trans      &trans
-        &trans        &trans  &trans  &trans  &trans    &trans  &trans         &kp RA(N7)  &kp RA(N0)  &trans
-&trans  &kp RA(NUBS)  &trans  &trans  &trans  &trans    &trans  &kp RA(MINUS)  &trans      &trans      &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans         &trans
+       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)      &kp LS(N6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
+       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)    &kp RBKT    &kp NUHS       &kp RA(N7)  &kp RA(N0)  &kp MINUS
+&none  &kp RA(NUBS)   &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp GRAVE       &kp EQUAL   &kp RA(MINUS)  &kp RA(N8)  &kp RA(N9)  &kp LS(FSLH)  &none
+                                  &none         &none         &none           &none       &trans         &none
             >;
 
             label = "SYW";
@@ -180,7 +180,7 @@
             bindings = <
        &kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_MINUS    &none      &none      &none     &none     &none
        &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS     &none      &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL
-&none  &kp N0           &kp N1  &kp N2  &kp N3  &kp KP_COMMA    &none      &none      &none     &none     &none      &none
+&none  &kp N0           &kp N1  &kp N2  &kp N3  &kp KP_DOT      &none      &none      &none     &none     &none      &none
                                 &none   &none   &trans          &kp ENTER  &kp BSPC   &kp RALT
             >;
 
@@ -189,10 +189,10 @@
 
         num_win {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans    &trans
-                        &trans  &trans  &trans    &trans  &trans     &trans
+       &kp KP_SLASH     &kp N7  &kp N8  &kp N9  &kp KP_MINUS    &none      &none      &none      &none     &none
+       &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS     &none      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp N0           &kp N1  &kp N2  &kp N3  &kp KP_COMMA    &none      &none      &none      &none     &none     &none
+                                &none   &none   &none           &kp ENTER  &kp BSPC   &kp RALT
             >;
 
             label = "NUW";
@@ -211,10 +211,10 @@
 
         fun_win {
             bindings = <
-        &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
-        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans     &trans     &trans    &trans  &trans  &trans
+       &none     &none     &none      &none      &none     &none  &kp F7  &kp F8  &kp F9  &kp F12
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &none  &kp F4  &kp F5  &kp F6  &kp F11
+&none  &none     &none     &none      &none      &none     &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                           &none      &none      &mo 10    &none  &none   &none
             >;
 
             label = "FUW";
