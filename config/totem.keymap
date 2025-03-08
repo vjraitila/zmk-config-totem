@@ -88,9 +88,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &kp O        &kp P
-            &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
-&caps_word  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
+            &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I                &kp O            &kp P
+            &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RGUI K          &hmr RALT L      &hmr RCTRL SEMI
+&caps_word  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &mt LS(COMMA) COMMA  &mt LS(DOT) DOT  &mt LS(FSLH) FSLH  &kp SQT
                                        &kp LGUI     &lt 2 SPACE   &lt 6 TAB    &lt 8 RET  &lt 4 BSPC    &kp RALT
             >;
         };
