@@ -79,7 +79,7 @@
             &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &kp O        &kp P
             &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
 &caps_word  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
-                                       &kp LGUI     &lt 2 SPACE   &lt 6 TAB    &lt 8 RET  &lt 4 BSPC    &kp RALT
+                                       &mo 12       &lt 4 SPACE   &lt 8 TAB    &lt 2 RET  &lt 6 BSPC    &mo 10
             >;
         };
 
@@ -88,7 +88,7 @@
         &trans       &trans       &trans        &trans        &trans       &trans     &trans        &trans        &trans       &trans
         &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &trans       &trans     &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
 &trans  &trans       &trans       &trans        &trans        &trans       &trans     &trans        &trans        &trans       &trans          &trans
-                                  &kp LCTRL     &lt 3 SPACE   &lt 7 TAB    &lt 9 RET  &lt 5 BSPC    &kp RALT
+                                  &mo 12        &lt 5 SPACE   &lt 9 TAB    &lt 3 RET  &lt 7 BSPC    &mo 11
             >;
 
             label = "WIN";
@@ -114,7 +114,7 @@
        &none      &none      &kp LS(LG(N3))  &kp LS(LG(N4))  &none      &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
        &kp LCTRL  &kp LALT   &kp LGUI        &kp LSHFT       &none      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)       &none      &none      &none     &none     &none      &none    &none
-                             &none           &trans          &kp TAB    &kp RET    &kp BSPC  &kp RALT
+                             &none           &kp SPACE       &kp TAB    &trans     &none     &none
             >;
         };
 
@@ -123,16 +123,16 @@
        &none      &none      &none      &none      &none      &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
 &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none      &none      &none     &none     &none      &none    &none
-                             &none      &trans     &kp TAB    &kp ENTER  &kp BSPC  &kp RALT
+                             &none      &kp SPACE  &kp TAB    &trans     &none     &none
             >;
 
             label = "NAW";
         };
 
-        sym_layer {
+        syl_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "SYM";
+            label = "SLL";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -146,30 +146,50 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)       &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)     &kp RBKT    &kp NUHS        &kp LS(LA(N8))  &kp LS(LA(N9))  &kp LS(COMMA)
-&none  &kp RA(N7)     &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp LS(EQUAL)    &kp EQUAL   &kp LS(LA(N7))  &kp RA(N8)      &kp RA(N9)      &kp MINUS      &none
-                                  &none         &kp SPACE     &none            &none       &trans          &none
+       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)       &none  &none  &none  &none  &none
+       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)     &none  &none  &none  &none  &none
+&none  &kp RA(N7)     &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp LS(EQUAL)    &none  &none  &none  &none  &none  &none
+                                  &none         &trans        &none            &none  &none  &none
             >;
         };
 
-        sym_win {
+        syl_win {
             bindings = <
-       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)       &kp LS(N6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
-       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)     &kp RBKT    &kp NUHS       &kp RA(N7)  &kp RA(N0)  &kp LS(COMMA)
-&none  &kp RA(NUBS)   &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp LS(EQUAL)    &kp EQUAL   &kp RA(MINUS)  &kp RA(N8)  &kp RA(N9)  &kp MINUS      &none
-                                  &none         &kp SPACE     &none            &none       &trans         &none
+       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)       &none  &none  &none  &none  &none
+       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)     &none  &none  &none  &none  &none
+&none  &kp RA(NUBS)   &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp LS(EQUAL)    &none  &none  &none  &none  &none  &none
+                                  &none         &trans        &none            &none  &none  &none
             >;
 
-            label = "SYW";
+            label = "SLW";
+        };
+
+        syr_layer {
+            label = "SRL";
+            bindings = <
+       &none  &none  &none  &none  &none    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+       &none  &none  &none  &none  &none    &kp RBKT    &kp NUHS        &kp LS(LA(N8))  &kp LS(LA(N9))  &kp LS(COMMA)
+&none  &none  &none  &none  &none  &none    &kp EQUAL   &kp LS(LA(N7))  &kp RA(N8)      &kp RA(N9)      &kp MINUS      &none
+                     &none  &none  &none    &none       &trans          &none
+            >;
+        };
+
+        syr_win {
+            label = "SRW";
+            bindings = <
+       &none  &none  &none  &none  &none    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
+       &none  &none  &none  &none  &none    &kp RBKT    &kp NUHS       &kp RA(N7)  &kp RA(N0)  &kp LS(COMMA)
+&none  &none  &none  &none  &none  &none    &kp EQUAL   &kp RA(MINUS)  &kp RA(N8)  &kp RA(N9)  &kp MINUS      &none
+                     &none  &none  &none    &none       &trans         &none
+            >;
         };
 
         num_layer {
             bindings = <
-       &kp N1  &kp N2  &kp N3  &kp N4      &kp N5    &none   &none      &none     &none     &none
-       &kp N6  &kp N7  &kp N8  &kp N9      &kp N0    &none   &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL
-&none  &none   &none   &none   &kp KP_DOT  &none     &none   &none      &none     &none     &none      &none
-                       &none   &none       &trans    &mo 10  &none      &none
+       &kp N1  &kp N2  &kp N3  &kp N4      &kp N5    &none  &none      &none     &none     &none
+       &kp N6  &kp N7  &kp N8  &kp N9      &kp N0    &none  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL
+&none  &none   &none   &none   &kp KP_DOT  &none     &none  &none      &none     &none     &none      &none
+                       &none   &none       &trans    &none  &none      &none
             >;
 
             label = "NUM";
@@ -177,10 +197,10 @@
 
         num_win {
             bindings = <
-       &kp N1  &kp N2  &kp N3  &kp N4        &kp N5    &none   &none      &none      &none     &none
-       &kp N6  &kp N7  &kp N8  &kp N9        &kp N0    &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&none  &none   &none   &none   &kp KP_COMMA  &none     &none   &none      &none      &none     &none     &none
-                       &none   &none         &trans    &mo 10  &none      &none
+       &kp N1  &kp N2  &kp N3  &kp N4        &kp N5    &none  &none      &none     &none     &none
+       &kp N6  &kp N7  &kp N8  &kp N9        &kp N0    &none  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL
+&none  &none   &none   &none   &kp KP_COMMA  &none     &none  &none      &none     &none     &none      &none
+                       &none   &none         &trans    &none  &none      &none
             >;
 
             label = "NUW";
@@ -188,10 +208,10 @@
 
         fun_layer {
             bindings = <
-       &none      &none     &none     &none      &none     &none   &kp F7  &kp F8  &kp F9  &kp F12
-       &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none     &none   &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none      &none     &none     &none      &none     &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
-                            &none     &none      &mo 10    &trans  &none   &none
+       &none      &none     &none     &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
+       &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
+&none  &none      &none     &none     &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                            &none     &none      &none    &none  &none   &trans
             >;
 
             label = "FUN";
@@ -199,10 +219,10 @@
 
         fun_win {
             bindings = <
-       &none     &none     &none      &none      &none     &none   &kp F7  &kp F8  &kp F9  &kp F12
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &none   &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none     &none     &none      &none      &none     &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
-                           &none      &none      &mo 10    &trans  &none   &none
+       &none     &none     &none      &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
+&none  &none     &none     &none      &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                           &none      &none      &none    &none  &none   &trans
             >;
 
             label = "FUW";
@@ -225,10 +245,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &sys_reset    &bootloader   &out OUT_TOG  &none         &none     &none   &kp C_MUTE  &kp C_VOL_UP  &kp C_BRI_UP  &none
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none     &none   &tog 1      &kp C_VOL_DN  &kp C_BRI_DN  &none
-&bt BT_CLR  &none         &none         &none         &none         &none     &none   &none       &none         &none         &none  &none
-                                        &none         &none         &trans    &trans  &none       &none
+            &sys_reset    &bootloader   &out OUT_TOG  &none         &none    &none  &kp C_MUTE  &kp C_VOL_UP  &kp C_BRI_UP  &none
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none  &tog 1      &kp C_VOL_DN  &kp C_BRI_DN  &none
+&bt BT_CLR  &none         &none         &none         &none         &none    &none  &none       &none         &none         &none  &none
+                                        &trans        &none         &none    &none  &none       &none
             >;
         };
     };
