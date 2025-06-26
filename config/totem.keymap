@@ -79,7 +79,7 @@
             &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &kp O        &kp P
             &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
 &caps_word  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
-                                       &mo 12       &lt 4 SPACE   &lt 8 TAB    &lt 2 RET  &lt 6 BSPC    &mo 10
+                                       &none        &lt 2 SPACE   &lt 6 TAB    &lt 8 RET  &lt 4 BSPC    &none
             >;
         };
 
@@ -88,45 +88,10 @@
         &trans       &trans       &trans        &trans        &trans       &trans     &trans        &trans        &trans       &trans
         &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &trans       &trans     &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
 &trans  &trans       &trans       &trans        &trans        &trans       &trans     &trans        &trans        &trans       &trans          &trans
-                                  &mo 12        &lt 5 SPACE   &lt 9 TAB    &lt 3 RET  &lt 7 BSPC    &mo 11
+                                  &none         &lt 3 SPACE   &lt 7 TAB    &lt 8 RET  &lt 5 BSPC    &none
             >;
 
             label = "WIN";
-        };
-
-        nav_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "NAV";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃           ┃           ┃     UP    ┃           ┃     {     ┃   ┃     }     ┃     7     ┃     8     ┃     9     ┃     +     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃   SHIFT   ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃     [     ┃   ┃     ]     ┃     4     ┃     5     ┃     6     ┃     -     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃   P UP    ┃  C LOCK   ┃  P DOWN   ┃     (     ┃   ┃     )     ┃     1     ┃     2     ┃     3     ┃     *     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    TAB    ┃    SPC    ┃   ┃    DEL    ┃     0     ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-       &none      &none      &kp LS(LG(N3))  &kp LS(LG(N4))  &none      &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
-       &kp LCTRL  &kp LALT   &kp LGUI        &kp LSHFT       &none      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)       &none      &none      &none     &none     &none      &none    &none
-                             &none           &kp SPACE       &kp TAB    &trans     &none     &none
-            >;
-        };
-
-        nav_win {
-            bindings = <
-       &none      &none      &none      &none      &none      &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
-       &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none      &none      &none     &none     &none      &none    &none
-                             &none      &kp SPACE  &kp TAB    &trans     &none     &none
-            >;
-
-            label = "NAW";
         };
 
         syl_layer {
@@ -146,19 +111,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)       &none  &none  &none  &none  &none
-       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)     &none  &none  &none  &none  &none
-&none  &kp RA(N7)     &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp LS(EQUAL)    &none  &none  &none  &none  &none  &none
-                                  &none         &trans        &none            &none  &none  &none
+       &kp LS(N1)            &kp LS(N2)        &kp LS(N3)          &kp LS(N4)         &kp LS(N5)       &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
+       &hml LCTRL LS(MINUS)  &hml LALT RA(N2)  &hml LGUI LS(NUHS)  &hml LSHFT RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
+&none  &kp RA(N7)            &kp NUBS          &kp LS(NUBS)        &kp RA(RBKT)       &kp LS(EQUAL)    &none      &none     &none     &none      &none    &none
+                                               &none               &trans             &none            &none      &none     &none
             >;
         };
 
         syl_win {
             bindings = <
-       &kp LS(N1)     &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)       &none  &none  &none  &none  &none
-       &kp LS(MINUS)  &kp RA(N2)  &kp LS(NUHS)  &kp RA(N4)    &kp LS(RBKT)     &none  &none  &none  &none  &none
-&none  &kp RA(NUBS)   &kp NUBS    &kp LS(NUBS)  &kp RA(RBKT)  &kp LS(EQUAL)    &none  &none  &none  &none  &none  &none
-                                  &none         &trans        &none            &none  &none  &none
+       &kp LS(N1)           &kp LS(N2)        &kp LS(N3)           &kp LS(N4)         &kp LS(N5)       &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
+       &hml LGUI LS(MINUS)  &hml LALT RA(N2)  &hml LCTRL LS(NUHS)  &hml LSHFT RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
+&none  &kp RA(NUBS)         &kp NUBS          &kp LS(NUBS)         &kp RA(RBKT)       &kp LS(EQUAL)    &none      &none     &none     &none      &none    &none
+                                              &none                &trans             &none            &none      &none     &none
             >;
 
             label = "SLW";
@@ -167,20 +132,20 @@
         syr_layer {
             label = "SRL";
             bindings = <
-       &none  &none  &none  &none  &none    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-       &none  &none  &none  &none  &none    &kp RBKT    &kp NUHS        &kp LS(LA(N8))  &kp LS(LA(N9))  &kp LS(COMMA)
-&none  &none  &none  &none  &none  &none    &kp EQUAL   &kp LS(LA(N7))  &kp RA(N8)      &kp RA(N9)      &kp MINUS      &none
-                     &none  &none  &none    &none       &trans          &none
+       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)            &kp LS(N9)            &kp LS(N0)
+       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr RGUI LS(LA(N8))  &hmr RALT LS(LA(N9))  &hmr RCTRL LS(COMMA)
+&none  &kp F11  &kp F12  &none   &none   &none      &kp EQUAL   &kp LS(LA(N7))   &kp RA(N8)            &kp RA(N9)            &kp MINUS             &none
+                         &none   &none   &none      &none       &trans           &none
             >;
         };
 
         syr_win {
             label = "SRW";
             bindings = <
-       &none  &none  &none  &none  &none    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
-       &none  &none  &none  &none  &none    &kp RBKT    &kp NUHS       &kp RA(N7)  &kp RA(N0)  &kp LS(COMMA)
-&none  &none  &none  &none  &none  &none    &kp EQUAL   &kp RA(MINUS)  &kp RA(N8)  &kp RA(N9)  &kp MINUS      &none
-                     &none  &none  &none    &none       &trans         &none
+       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)         &kp LS(N9)        &kp LS(N0)
+       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr RCTRL RA(N7)  &hmr RALT RA(N0)  &hmr RGUI LS(COMMA)
+&none  &kp F11  &kp F12  &none   &none   &none      &kp EQUAL   &kp RA(MINUS)    &kp RA(N8)         &kp RA(N9)        &kp MINUS            &none
+                         &none   &none   &none      &none       &trans           &none
             >;
         };
 
@@ -206,28 +171,6 @@
             label = "NUW";
         };
 
-        fun_layer {
-            bindings = <
-       &none      &none     &none     &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
-       &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none      &none     &none     &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
-                            &none     &none      &none    &none  &none   &trans
-            >;
-
-            label = "FUN";
-        };
-
-        fun_win {
-            bindings = <
-       &none     &none     &none      &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none     &none     &none      &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
-                           &none      &none      &none    &none  &none   &trans
-            >;
-
-            label = "FUW";
-        };
-
         sys_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -245,10 +188,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &sys_reset    &bootloader   &out OUT_TOG  &none         &none    &none  &kp C_MUTE  &kp C_VOL_UP  &kp C_BRI_UP  &none
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none  &tog 1      &kp C_VOL_DN  &kp C_BRI_DN  &none
-&bt BT_CLR  &none         &none         &none         &none         &none    &none  &none       &none         &none         &none  &none
-                                        &trans        &none         &none    &none  &none       &none
+            &sys_reset    &bootloader   &out OUT_TOG  &none         &none    &none   &kp C_MUTE  &kp C_VOL_UP  &kp C_BRI_UP  &none
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none   &tog 1      &kp C_VOL_DN  &kp C_BRI_DN  &none
+&bt BT_CLR  &none         &none         &none         &none         &none    &none   &none       &none         &none         &none  &none
+                                        &none         &none         &none    &trans  &none       &none
             >;
         };
     };
