@@ -15,40 +15,28 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define MAC 0
-#define WIN 1
-#define NAV 2
-#define NAW 3
-#define SYM 4
-#define SYW 5
-#define NUM 6
-#define NUW 7
-#define FUN 8
-#define FUW 9
-#define SYS 10
-
 / {
     behaviors {
-        hml: homerow_mods_left {
+        hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
+            require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 32 33 34 35 36 37>;
             hold-trigger-on-release;
         };
 
-        hmr: homerow_mods_right {
+        hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
+            require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <4 3 2 1 0 14 13 12 11 10 25 24 23 22 21 20 32 33 34 35 36 37>;
@@ -189,9 +177,9 @@
 
         num_win {
             bindings = <
-       &kp N1  &kp N2  &kp N3  &kp N4        &kp N5    &none   &none      &none     &none     &none
-       &kp N6  &kp N7  &kp N8  &kp N9        &kp N0    &none   &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL
-&none  &none   &none   &none   &kp KP_COMMA  &none     &none   &none      &none     &none     &none      &none
+       &kp N1  &kp N2  &kp N3  &kp N4        &kp N5    &none   &none      &none      &none     &none
+       &kp N6  &kp N7  &kp N8  &kp N9        &kp N0    &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &none   &none   &none   &kp KP_COMMA  &none     &none   &none      &none      &none     &none     &none
                        &none   &none         &trans    &mo 10  &none      &none
             >;
 
