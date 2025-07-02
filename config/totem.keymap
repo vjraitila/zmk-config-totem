@@ -63,22 +63,46 @@
             bindings = <&kp ESC>;
         };
 
-        combo_copy {
+        combo_copy_mac {
             bindings = <&kp LG(C)>;
             key-positions = <22 23>;
             require-prior-idle-ms = <150>;
+            layers = <2>;
         };
 
-        combo_paste {
+        combo_copy_win {
+            bindings = <&kp LC(C)>;
+            key-positions = <22 23>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
+        };
+
+        combo_paste_mac {
             bindings = <&kp LG(V)>;
             key-positions = <23 24>;
             require-prior-idle-ms = <150>;
+            layers = <2>;
         };
 
-        combo_cut {
+        combo_paste_win {
+            bindings = <&kp LC(V)>;
+            key-positions = <23 24>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
+        };
+
+        combo_cut_mac {
             bindings = <&kp LG(X)>;
             key-positions = <22 24>;
             require-prior-idle-ms = <150>;
+            layers = <2>;
+        };
+
+        combo_cut_win {
+            bindings = <&kp LC(X)>;
+            key-positions = <22 24>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
         };
     };
 
