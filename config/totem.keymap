@@ -52,6 +52,37 @@
 
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 10 11 12 13>;
         };
+
+        shr: shift_repeat {
+            compatible = "zmk,behavior-adaptive-key";
+            bindings = <&sk LSHFT>;
+
+            #binding-cells = <0>;
+            repeat {
+                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+                bindings = <&key_repeat>;
+                max-prior-idle-ms = <1200>;
+                strict-modifiers;
+            };
+        };
+
+        mst: magic_shift_tap {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&shr>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        msh: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&mst>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+        };
     };
 
     combos {
@@ -86,10 +117,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &kp O        &kp P
-            &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
-&caps_word  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
-                                       &kp LGUI     &lt 2 SPACE   &lt 6 TAB    &lt 8 RET  &lt 4 BSPC    &kp RALT
+              &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &kp O        &kp P
+              &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
+&msh LSHFT 0  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
+                                         &kp LGUI     &lt 2 SPACE   &lt 6 TAB    &lt 8 RET  &lt 4 BSPC    &kp RALT
             >;
         };
 
