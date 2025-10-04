@@ -142,9 +142,9 @@
         syl_win {
             bindings = <
        &kp LS(N1)           &kp LS(N2)        &kp LS(N3)           &kp LS(N4)         &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
-       &nvo LGUI LS(MINUS)  &nvo LALT RA(N2)  &nvo LCTRL LS(NUHS)  &nvo LSHFT RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
+       &nvo LGUI LS(MINUS)  &nvo LALT RA(N2)  &nvo LCTRL LS(NUHS)  &nvo LSHFT RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
 &none  &kp RA(NUBS)         &kp NUBS          &kp LS(NUBS)         &kp RA(RBKT)       &kp LS(EQUAL)    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none
-                                              &none                &trans             &none            &kp RET    &kp BSPC   &none
+                                              &none                &trans             &none            &kp RET    &kp BSPC   &kp DEL
             >;
 
             label = "SLW";
