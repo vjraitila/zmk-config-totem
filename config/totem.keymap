@@ -146,19 +146,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(N1)            &kp LS(N2)        &kp LS(N3)          &kp LS(N4)         &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
-       &nvo LCTRL LS(MINUS)  &nvo LALT RA(N2)  &nvo LGUI LS(NUHS)  &nvo LSHFT RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
-&none  &kp RA(N7)            &kp NUBS          &kp LS(NUBS)        &kp RA(RBKT)       &kp LS(EQUAL)    &none      &kp LG(X)  &kp LG(C)  &kp LG(V)  &none    &none
-                                               &none               &trans             &none            &kp RET    &kp BSPC   &kp DEL
+       &kp LS(N1)              &kp LS(N2)          &kp LS(N3)            &kp LS(N4)           &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
+       &nvo (LCTRL) LS(MINUS)  &nvo (LALT) RA(N2)  &nvo (LGUI) LS(NUHS)  &nvo (LSHFT) RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
+&none  &kp RA(N7)              &kp NUBS            &kp LS(NUBS)          &kp RA(RBKT)         &kp LS(EQUAL)    &none      &kp LG(X)  &kp LG(C)  &kp LG(V)  &none    &none
+                                                   &none                 &trans               &none            &kp RET    &kp BSPC   &kp DEL
             >;
         };
 
         syl_win {
             bindings = <
-       &kp LS(N1)           &kp LS(N2)        &kp LS(N3)           &kp LS(N4)         &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
-       &nvo LGUI LS(MINUS)  &nvo LALT RA(N2)  &nvo LCTRL LS(NUHS)  &nvo LSHFT RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
-&none  &kp RA(NUBS)         &kp NUBS          &kp LS(NUBS)         &kp RA(RBKT)       &kp LS(EQUAL)    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none
-                                              &none                &trans             &none            &kp RET    &kp BSPC   &kp DEL
+       &kp LS(N1)             &kp LS(N2)          &kp LS(N3)             &kp LS(N4)           &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
+       &nvo (LGUI) LS(MINUS)  &nvo (LALT) RA(N2)  &nvo (LCTRL) LS(NUHS)  &nvo (LSHFT) RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
+&none  &kp RA(NUBS)           &kp NUBS            &kp LS(NUBS)           &kp RA(RBKT)         &kp LS(EQUAL)    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none
+                                                  &none                  &trans               &none            &kp RET    &kp BSPC   &kp DEL
             >;
 
             label = "SLW";
@@ -167,9 +167,9 @@
         syr_layer {
             label = "SRL";
             bindings = <
-       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)            &kp LS(N9)            &kp LS(N0)
-       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr RGUI LS(LA(N8))  &hmr RALT LS(LA(N9))  &hmr RCTRL LS(COMMA)
-&none  &kp F11  &kp F12  &none   &none   &none      &kp EQUAL   &kp LS(LA(N7))   &kp RA(N8)            &kp RA(N9)            &kp MINUS             &none
+       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)              &kp LS(N9)              &kp LS(N0)
+       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr (RGUI) LS(LA(N8))  &hmr (RALT) LS(LA(N9))  &hmr (RCTRL) LS(COMMA)
+&none  &kp F11  &kp F12  &none   &none   &none      &kp EQUAL   &kp LS(LA(N7))   &kp RA(N8)              &kp RA(N9)              &kp MINUS               &kp LBKT
                          &none   &none   &none      &none       &trans           &none
             >;
         };
@@ -177,9 +177,9 @@
         syr_win {
             label = "SRW";
             bindings = <
-       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)         &kp LS(N9)        &kp LS(N0)
-       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr RCTRL RA(N7)  &hmr RALT RA(N0)  &hmr RGUI LS(COMMA)
-&none  &kp F11  &kp F12  &none   &none   &none      &kp EQUAL   &kp RA(MINUS)    &kp RA(N8)         &kp RA(N9)        &kp MINUS            &none
+       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)           &kp LS(N9)          &kp LS(N0)
+       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr (RCTRL) RA(N7)  &hmr (RALT) RA(N0)  &hmr (RGUI) LS(COMMA)
+&none  &kp F11  &kp F12  &none   &none   &none      &kp EQUAL   &kp RA(MINUS)    &kp RA(N8)           &kp RA(N9)          &kp MINUS              &kp LBKT
                          &none   &none   &none      &none       &trans           &none
             >;
         };
