@@ -1,19 +1,10 @@
-//
-//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
-//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
-//                                                        █   █  █  █   █  █  █   █  █  █   █
-//                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
-//                                                               ▀      █  █  █     █▄█
-//                                                             ▀▀▀▀▀    █  █  █      ▀
-//                                                                      ▀  ▀  ▀
-//
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+// Configuration built with https://nickcoutsos.github.io/keymap-editor/
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "keys_fi.h" // Source: https://github.com/joelspadin/zmk-locale-generator
 
 &sk {
     release-after-ms = <900>;
@@ -48,14 +39,13 @@
             hold-trigger-on-release;
         };
 
-        nvo: navigation_mod {
+        hnl: home_row_nav_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
             flavor = "hold-preferred";
             tapping-term-ms = <175>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 10 11 12 13 35 36>;
         };
 
         msh: magic_shift {
@@ -92,104 +82,78 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         base_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            bindings = <
+          &kp FI_Q         &kp FI_W        &kp FI_E        &kp FI_R         &kp FI_T    &kp FI_Y   &kp FI_U         &kp FI_I        &kp FI_O        &kp FI_P
+          &hml LCTRL FI_A  &hml LALT FI_S  &hml LGUI FI_D  &hml LSHFT FI_F  &kp FI_G    &kp FI_H   &hmr RSHFT FI_J  &hmr RGUI FI_K  &hmr RALT FI_L  &hmr RCTRL FI_O_UMLAUT
+&kp CAPS  &kp FI_Z         &kp FI_X        &kp FI_C        &kp FI_V         &kp FI_B    &kp FI_N   &kp FI_M         &kp FI_COMMA    &kp FI_DOT      &kp FI_MINUS            &kp FI_A_UMLAUT
+                                           &kp LGUI        &lt 2 SPACE      &msh 6 0    &lt 8 RET  &lt 4 BSPC       &kp RALT
+            >;
 
             label = "MAC";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Y     ┃     U     ┃     I     ┃     O     ┃     P     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     A     ┃     S     ┃     D     ┃     F     ┃     G     ┃   ┃     H     ┃     J     ┃     K     ┃     L     ┃     ;     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃     Q     ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃     /     ┃     \     ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃    DEL    ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃           ┃   BSPC    ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-          &kp Q         &kp W        &kp E        &kp R         &kp T       &kp Y      &kp U         &kp I        &kp O        &kp P
-          &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G       &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
-&kp CAPS  &kp Z         &kp X        &kp C        &kp V         &kp B       &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
-                                     &kp LGUI     &lt 2 SPACE   &msh 6 0    &lt 8 RET  &lt 4 BSPC    &kp RALT
-            >;
         };
 
         base_win {
             bindings = <
-        &trans       &trans       &trans        &trans        &trans      &trans     &trans        &trans        &trans       &trans
-        &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &trans      &trans     &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
-&trans  &trans       &trans       &trans        &trans        &trans      &trans     &trans        &trans        &trans       &trans          &trans
-                                  &kp LCTRL     &lt 3 SPACE   &msh 7 0    &lt 8 RET  &lt 5 BSPC    &kp RALT
+        &trans          &trans          &trans           &trans           &trans      &trans     &trans           &trans           &trans          &trans
+        &hml LGUI FI_A  &hml LALT FI_S  &hml LCTRL FI_D  &hml LSHFT FI_F  &trans      &trans     &hmr RSHFT FI_J  &hmr RCTRL FI_K  &hmr RALT FI_L  &hmr RGUI FI_O_UMLAUT
+&trans  &trans          &trans          &trans           &trans           &trans      &trans     &trans           &trans           &trans          &trans                 &trans
+                                        &kp LCTRL        &lt 3 SPACE      &msh 7 0    &lt 8 RET  &lt 5 BSPC       &kp RALT
             >;
 
             label = "WIN";
         };
 
-        syl_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SLL";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
+        sym_nav_layer {
             bindings = <
-       &kp LS(N1)              &kp LS(N2)          &kp LS(N3)            &kp LS(N4)           &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
-       &nvo (LCTRL) LS(MINUS)  &nvo (LALT) RA(N2)  &nvo (LGUI) LS(NUHS)  &nvo (LSHFT) RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
-&none  &kp RA(N7)              &kp NUBS            &kp LS(NUBS)          &kp RA(RBKT)         &kp LS(EQUAL)    &none      &kp LG(X)  &kp LG(C)  &kp LG(V)  &none    &none
-                                                   &none                 &trans               &none            &kp RET    &kp BSPC   &kp DEL
+       &kp FI_EXCL          &kp FI_DQT       &kp FI_HASH         &kp FI_CURREN       &kp FI_PRCNT    &kp PG_UP  &kp HOME      &kp UP        &kp END       &kp INS
+       &hnl LCTRL FI_QMARK  &hnl LALT FI_AT  &hnl LGUI FI_ASTRK  &hnl LSHFT FI_DLLR  &kp FI_CARET    &kp PG_DN  &kp LEFT      &kp DOWN      &kp RIGHT     &kp TAB
+&none  &kp RA(FI_N7)        &kp FI_LT        &kp FI_GT           &kp FI_TILDE        &kp FI_GRAVE    &none      &kp LG(FI_X)  &kp LG(FI_C)  &kp LG(FI_V)  &none    &none
+                                             &none               &trans              &none           &kp RET    &kp BSPC      &kp DEL
             >;
+
+            label = "SNL";
         };
 
-        syl_win {
+        sym_nav_win {
             bindings = <
-       &kp LS(N1)             &kp LS(N2)          &kp LS(N3)             &kp LS(N4)           &kp LS(N5)       &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS
-       &nvo (LGUI) LS(MINUS)  &nvo (LALT) RA(N2)  &nvo (LCTRL) LS(NUHS)  &nvo (LSHFT) RA(N4)  &kp LS(RBKT)     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp TAB
-&none  &kp RA(NUBS)           &kp NUBS            &kp LS(NUBS)           &kp RA(RBKT)         &kp LS(EQUAL)    &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none
-                                                  &none                  &trans               &none            &kp RET    &kp BSPC   &kp DEL
+       &kp FI_EXCL         &kp FI_DQT       &kp FI_HASH          &kp FI_CURREN       &kp FI_PRCNT    &kp PG_UP  &kp HOME      &kp UP        &kp END       &kp INS
+       &hnl LGUI FI_QMARK  &hnl LALT FI_AT  &hnl LCTRL FI_ASTRK  &hnl LSHFT FI_DLLR  &kp FI_CARET    &kp PG_DN  &kp LEFT      &kp DOWN      &kp RIGHT     &kp TAB
+&none  &kp FI_PIPE         &kp FI_LT        &kp FI_GT            &kp FI_TILDE        &kp FI_GRAVE    &none      &kp LC(FI_X)  &kp LC(FI_C)  &kp LC(FI_V)  &none    &none
+                                            &none                &trans              &none           &kp RET    &kp BSPC      &kp DEL
             >;
 
-            label = "SLW";
+            label = "SNW";
         };
 
-        syr_layer {
-            label = "SRL";
+        fun_sym_layer {
             bindings = <
-       &kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)              &kp LS(N9)              &kp LS(N0)
-       &kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr (RGUI) LS(LA(N8))  &hmr (RALT) LS(LA(N9))  &hmr (RCTRL) LS(COMMA)
-&none  &none   &none   &none    &none    &none      &kp EQUAL   &kp LS(LA(N7))   &kp RA(N8)              &kp RA(N9)              &kp MINUS               &kp LBKT
-                       &kp F11  &kp F12  &none      &none       &trans           &none
+       &kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &kp FI_AMPS    &kp FI_FSLH        &kp FI_LPAR                &kp FI_RPAR                &kp FI_EQUAL
+       &kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &kp FI_UMLAUT  &hmr RSHFT FI_SQT  &hmr (RGUI) LS(LA(FI_N8))  &hmr (RALT) LS(LA(FI_N9))  &hmr RCTRL FI_SEMI
+&none  &none   &none   &none    &none    &none      &kp FI_ACUTE   &kp LS(LA(FI_N7))  &kp FI_LBKT                &kp FI_RBKT                &kp FI_PLUS         &kp FI_A_RING
+                       &kp F11  &kp F12  &none      &none          &trans             &none
             >;
+
+            label = "FSL";
         };
 
-        syr_win {
-            label = "SRW";
+        fun_sym_win {
             bindings = <
-       &kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &kp LS(N6)  &kp LS(N7)       &kp LS(N8)           &kp LS(N9)          &kp LS(N0)
-       &kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &kp RBKT    &hmr RSHFT NUHS  &hmr (RCTRL) RA(N7)  &hmr (RALT) RA(N0)  &hmr (RGUI) LS(COMMA)
-&none  &none   &none   &none    &none    &none      &kp EQUAL   &kp RA(MINUS)    &kp RA(N8)           &kp RA(N9)          &kp MINUS              &kp LBKT
-                       &kp F11  &kp F12  &none      &none       &trans           &none
+       &kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &kp FI_AMPS    &kp FI_FSLH        &kp FI_LPAR         &kp FI_RPAR        &kp FI_EQUAL
+       &kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &kp FI_UMLAUT  &hmr RSHFT FI_SQT  &hmr RCTRL FI_LBRC  &hmr RALT FI_RBRC  &hmr RGUI FI_SEMI
+&none  &none   &none   &none    &none    &none      &kp FI_ACUTE   &kp FI_BSLH        &kp FI_LBKT         &kp FI_RBKT        &kp FI_PLUS        &kp FI_A_RING
+                       &kp F11  &kp F12  &none      &none          &trans             &none
             >;
+
+            label = "FSW";
         };
 
         num_layer {
             bindings = <
-       &kp N1  &kp N2  &kp N3  &kp N4      &kp N5    &kp N6  &kp N7     &kp N8    &kp N9    &kp N0
-       &kp N6  &kp N7  &kp N8  &kp N9      &kp N0    &none   &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL
-&none  &none   &none   &none   &kp KP_DOT  &none     &none   &none      &none     &none     &none      &none
-                       &none   &none       &trans    &none   &none      &none
+       &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4   &kp FI_N5    &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
+       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9   &kp FI_N0    &none      &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL
+&none  &none      &none      &none      &kp KP_DOT  &none        &none      &none      &none      &none      &none      &none
+                             &none      &none       &trans       &none      &none      &none
             >;
 
             label = "NUM";
@@ -197,37 +161,24 @@
 
         num_win {
             bindings = <
-       &kp N1  &kp N2  &kp N3  &kp N4        &kp N5    &none  &none      &none      &none     &none
-       &kp N6  &kp N7  &kp N8  &kp N9        &kp N0    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&none  &none   &none   &none   &kp KP_COMMA  &none     &none  &none      &none      &none     &none     &none
-                       &none   &none         &trans    &none  &none      &none
+       &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4     &kp FI_N5    &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
+       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9     &kp FI_N0    &none      &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
+&none  &none      &none      &none      &kp KP_COMMA  &none        &none      &none      &none      &none      &none      &none
+                             &none      &none         &trans       &none      &none      &none
             >;
 
             label = "NUW";
         };
 
         sys_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYS";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
             bindings = <
             &sys_reset    &bootloader   &out OUT_TOG  &none         &none    &none   &kp C_MUTE  &kp C_VOL_UP  &kp C_BRI_UP  &none
             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none   &tog 1      &kp C_VOL_DN  &kp C_BRI_DN  &none
 &bt BT_CLR  &none         &none         &none         &none         &none    &none   &none       &none         &none         &none  &none
                                         &none         &none         &none    &trans  &none       &none
             >;
+
+            label = "SYS";
         };
     };
 };
