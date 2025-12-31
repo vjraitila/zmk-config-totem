@@ -104,44 +104,44 @@
             label = "WIN";
         };
 
-        sym_nav_layer {
+        snav_layer {
             bindings = <
-       &kp FI_EXCL          &kp FI_DQT       &kp FI_HASH         &kp FI_CURREN       &kp FI_PRCNT    &kp PG_UP  &kp HOME      &kp UP        &kp END       &kp INS
-       &hnl LCTRL FI_QMARK  &hnl LALT FI_AT  &hnl LGUI FI_ASTRK  &hnl LSHFT FI_DLLR  &kp FI_CARET    &kp PG_DN  &kp LEFT      &kp DOWN      &kp RIGHT     &kp TAB
-&none  &kp RA(FI_N7)        &kp FI_LT        &kp FI_GT           &kp FI_TILDE        &kp FI_GRAVE    &none      &kp LG(FI_X)  &kp LG(FI_C)  &kp LG(FI_V)  &none    &none
-                                             &none               &trans              &none           &kp RET    &kp BSPC      &kp DEL
+                   &kp FI_EXCL          &kp FI_DQT       &kp FI_HASH         &kp FI_CURREN       &kp FI_PRCNT    &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
+                   &hnl LCTRL FI_QMARK  &hnl LALT FI_AT  &hnl LGUI FI_ASTRK  &hnl LSHFT FI_DLLR  &kp FI_CARET    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp TAB
+&kp LS(LA(FI_N7))  &kp RA(FI_N7)        &kp LG(FI_X)     &kp LG(FI_C)        &kp LG(FI_V)        &kp FI_GRAVE    &none      &none     &none     &none      &none    &none
+                                                         &none               &trans              &none           &kp RET    &kp BSPC  &kp DEL
             >;
 
             label = "SNL";
         };
 
-        sym_nav_win {
+        snav_win {
             bindings = <
-       &kp FI_EXCL         &kp FI_DQT       &kp FI_HASH          &kp FI_CURREN       &kp FI_PRCNT    &kp PG_UP  &kp HOME      &kp UP        &kp END       &kp INS
-       &hnl LGUI FI_QMARK  &hnl LALT FI_AT  &hnl LCTRL FI_ASTRK  &hnl LSHFT FI_DLLR  &kp FI_CARET    &kp PG_DN  &kp LEFT      &kp DOWN      &kp RIGHT     &kp TAB
-&none  &kp FI_PIPE         &kp FI_LT        &kp FI_GT            &kp FI_TILDE        &kp FI_GRAVE    &none      &kp LC(FI_X)  &kp LC(FI_C)  &kp LC(FI_V)  &none    &none
-                                            &none                &trans              &none           &kp RET    &kp BSPC      &kp DEL
+             &kp FI_EXCL         &kp FI_DQT       &kp FI_HASH          &kp FI_CURREN       &kp FI_PRCNT    &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS
+             &hnl LGUI FI_QMARK  &hnl LALT FI_AT  &hnl LCTRL FI_ASTRK  &hnl LSHFT FI_DLLR  &kp FI_CARET    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp TAB
+&kp FI_BSLH  &kp FI_PIPE         &kp LC(FI_X)     &kp LC(FI_C)         &kp LC(FI_V)        &kp FI_GRAVE    &none      &none     &none     &none      &none    &none
+                                                  &none                &trans              &none           &kp RET    &kp BSPC  &kp DEL
             >;
 
             label = "SNW";
         };
 
-        fun_sym_layer {
+        fsym_layer {
             bindings = <
        &kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &kp FI_AMPS    &kp FI_FSLH        &kp FI_LPAR                &kp FI_RPAR                &kp FI_EQUAL
        &kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &kp FI_UMLAUT  &hmr RSHFT FI_SQT  &hmr (RGUI) LS(LA(FI_N8))  &hmr (RALT) LS(LA(FI_N9))  &hmr RCTRL FI_SEMI
-&none  &none   &none   &none    &none    &none      &kp FI_ACUTE   &kp LS(LA(FI_N7))  &kp FI_LBKT                &kp FI_RBKT                &kp FI_PLUS         &kp FI_A_RING
+&none  &none   &none   &none    &none    &none      &kp FI_ACUTE   &kp FI_TILDE       &kp FI_LBKT                &kp FI_RBKT                &kp FI_PLUS         &kp FI_A_RING
                        &kp F11  &kp F12  &none      &none          &trans             &none
             >;
 
             label = "FSL";
         };
 
-        fun_sym_win {
+        fsym_win {
             bindings = <
        &kp F1  &kp F2  &kp F3   &kp F4   &kp F5     &kp FI_AMPS    &kp FI_FSLH        &kp FI_LPAR         &kp FI_RPAR        &kp FI_EQUAL
        &kp F6  &kp F7  &kp F8   &kp F9   &kp F10    &kp FI_UMLAUT  &hmr RSHFT FI_SQT  &hmr RCTRL FI_LBRC  &hmr RALT FI_RBRC  &hmr RGUI FI_SEMI
-&none  &none   &none   &none    &none    &none      &kp FI_ACUTE   &kp FI_BSLH        &kp FI_LBKT         &kp FI_RBKT        &kp FI_PLUS        &kp FI_A_RING
+&none  &none   &none   &none    &none    &none      &kp FI_ACUTE   &kp FI_TILDE       &kp FI_LBKT         &kp FI_RBKT        &kp FI_PLUS        &kp FI_A_RING
                        &kp F11  &kp F12  &none      &none          &trans             &none
             >;
 
@@ -150,10 +150,10 @@
 
         num_layer {
             bindings = <
-       &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4   &kp FI_N5    &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
-       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9   &kp FI_N0    &none      &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL
-&none  &none      &none      &none      &kp KP_DOT  &none        &none      &none      &none      &none      &none      &none
-                             &none      &none       &trans       &none      &none      &none
+       &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4  &kp FI_N5     &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
+       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0     &none      &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL
+&none  &none      &kp FI_LT  &kp FI_GT  &none      &kp KP_DOT    &none      &none      &none      &none      &none      &none
+                             &none      &none      &trans        &none      &kp BSPC   &none
             >;
 
             label = "NUM";
@@ -161,10 +161,10 @@
 
         num_win {
             bindings = <
-       &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4     &kp FI_N5    &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
-       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9     &kp FI_N0    &none      &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
-&none  &none      &none      &none      &kp KP_COMMA  &none        &none      &none      &none      &none      &none      &none
-                             &none      &none         &trans       &none      &none      &none
+       &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4  &kp FI_N5       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
+       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0       &none      &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
+&none  &none      &kp FI_LT  &kp FI_GT  &none      &kp KP_COMMA    &none      &none      &none      &none      &none      &none
+                             &none      &none      &trans          &none      &kp BSPC   &none
             >;
 
             label = "NUW";
@@ -172,10 +172,10 @@
 
         sys_layer {
             bindings = <
-            &sys_reset    &bootloader   &out OUT_TOG  &none         &none    &none   &kp C_MUTE  &kp C_VOL_UP  &kp C_BRI_UP  &none
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none   &tog 1      &kp C_VOL_DN  &kp C_BRI_DN  &none
-&bt BT_CLR  &none         &none         &none         &none         &none    &none   &none       &none         &none         &none  &none
-                                        &none         &none         &none    &trans  &none       &none
+            &sys_reset    &bootloader   &out OUT_TOG  &tog 1        &none    &none   &none  &kp C_VOL_UP  &kp C_BRI_UP  &none
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none   &none  &kp C_VOL_DN  &kp C_BRI_DN  &none
+&bt BT_CLR  &none         &none         &none         &none         &none    &none   &none  &kp C_MUTE    &none         &none  &none
+                                        &none         &none         &none    &trans  &none  &none
             >;
 
             label = "SYS";
