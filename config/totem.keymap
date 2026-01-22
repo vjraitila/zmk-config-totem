@@ -153,7 +153,7 @@
        &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4  &kp FI_N5     &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
        &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0     &none      &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL
 &none  &none      &kp FI_LT  &kp FI_GT  &none      &kp KP_DOT    &none      &none      &none      &none      &none      &none
-                             &none      &none      &trans        &none      &kp BSPC   &none
+                             &mo 9      &none      &trans        &none      &kp BSPC   &none
             >;
 
             label = "NUM";
@@ -164,18 +164,29 @@
        &kp FI_N1  &kp FI_N2  &kp FI_N3  &kp FI_N4  &kp FI_N5       &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0
        &kp FI_N6  &kp FI_N7  &kp FI_N8  &kp FI_N9  &kp FI_N0       &none      &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
 &none  &none      &kp FI_LT  &kp FI_GT  &none      &kp KP_COMMA    &none      &none      &none      &none      &none      &none
-                             &none      &none      &trans          &none      &kp BSPC   &none
+                             &mo 9      &none      &trans          &none      &kp BSPC   &none
             >;
 
             label = "NUW";
         };
 
+        con_layer {
+            bindings = <
+       &none  &none  &none  &none  &none    &none   &none  &kp C_VOL_UP  &kp C_BRI_UP  &none
+       &none  &none  &none  &none  &none    &none   &none  &kp C_VOL_DN  &kp C_BRI_DN  &none
+&none  &none  &none  &none  &none  &none    &none   &none  &kp C_MUTE    &none         &none  &none
+                     &none  &none  &none    &trans  &none  &none
+            >;
+
+            label = "CON";
+        };
+
         sys_layer {
             bindings = <
-            &sys_reset    &bootloader   &out OUT_TOG  &tog 1        &none    &none   &none  &kp C_VOL_UP  &kp C_BRI_UP  &none
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none   &none  &kp C_VOL_DN  &kp C_BRI_DN  &none
-&bt BT_CLR  &none         &none         &none         &none         &none    &none   &none  &kp C_MUTE    &none         &none  &none
-                                        &none         &none         &none    &trans  &none  &none
+            &sys_reset    &bootloader   &out OUT_TOG  &tog 1        &none     &none  &none  &none  &none  &none
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none     &none  &none  &none  &none  &none
+&bt BT_CLR  &none         &none         &none         &none         &none     &none  &none  &none  &none  &none  &none
+                                        &trans        &none         &trans    &none  &none  &none
             >;
 
             label = "SYS";
